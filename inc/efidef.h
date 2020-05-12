@@ -188,6 +188,8 @@ typedef struct {
     EFI_VIRTUAL_ADDRESS             VirtualStart;   // Field size is 64 bits
     UINT64                          NumberOfPages;  // Field size is 64 bits
     UINT64                          Attribute;      // Field size is 64 bits
+    UINT64                          Reserved;       // spec & tianocore source make it look like there's 40 bytes here
+                                                    // but runtime reports a size of 48 bytes
 } EFI_MEMORY_DESCRIPTOR;
 
 //
