@@ -92,7 +92,10 @@ install:
 		mkdir -p $(OBJDIR)/$$d; \
 		$(MAKE) -C $(OBJDIR)/$$d -f $(SRCDIR)/$$d/Makefile SRCDIR=$(SRCDIR)/$$d install; done
 
-.PHONY:	$(SUBDIRS) clean depend
+.PHONY:	$(SUBDIRS) clean depend TAGS
+
+TAGS:
+	ctags -R .
 
 #
 # on both platforms you must use gcc 3.0 or higher 

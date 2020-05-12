@@ -4,3 +4,6 @@
 *.a
 *.tar.*
 *.tar
+tags
+.clangd
+compile_commands.json
